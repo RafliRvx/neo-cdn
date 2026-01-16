@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEO-CDN | File Hosting</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="neo-header">
+            <div class="logo-container">
+                <div class="neo-logo">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                </div>
+                <h1 class="neo-title">NEO-CDN</h1>
+            </div>
+            <p class="neo-subtitle">Professional Cloud File Hosting</p>
+        </header>
+
+        <main class="upload-section">
+            <div class="upload-card neo-card">
+                <div class="upload-icon">
+                    <i class="fas fa-cloud-arrow-up"></i>
+                </div>
+                
+                <h2 class="upload-title">Upload Your File</h2>
+                <p class="upload-description">
+                    Drag & drop any file up to 20MB. All file types are supported.
+                </p>
+
+                <div class="upload-zone" id="uploadZone">
+                    <input type="file" id="fileInput" class="file-input" />
+                    <div class="zone-content">
+                        <i class="fas fa-file-upload zone-icon"></i>
+                        <p class="zone-text">Click to browse or drag & drop</p>
+                        <p class="zone-subtext">Max file size: 20MB</p>
+                    </div>
+                </div>
+
+                <div class="file-info" id="fileInfo">
+                    <!-- File info will appear here -->
+                </div>
+
+                <div class="upload-progress" id="uploadProgress">
+                    <div class="progress-bar" id="progressBar"></div>
+                    <span class="progress-text" id="progressText">0%</span>
+                </div>
+
+                <button class="neo-button" id="uploadButton" disabled>
+                    <span class="button-text">Upload to Cloud</span>
+                    <i class="fas fa-paper-plane button-icon"></i>
+                </button>
+
+                <div class="upload-tips">
+                    <div class="tip">
+                        <i class="fas fa-bolt"></i>
+                        <span>Automatic upload on file selection</span>
+                    </div>
+                    <div class="tip">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Files stored securely in cloud storage</span>
+                    </div>
+                    <div class="tip">
+                        <i class="fas fa-infinity"></i>
+                        <span>Permanent file hosting</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="result-card neo-card" id="resultCard">
+                <div class="result-header">
+                    <i class="fas fa-check-circle success-icon"></i>
+                    <h3 class="result-title">Upload Successful!</h3>
+                </div>
+                
+                <div class="result-content">
+                    <div class="result-info">
+                        <div class="info-item">
+                            <span class="info-label">File URL:</span>
+                            <div class="url-container">
+                                <input type="text" id="fileUrl" class="url-input" readonly />
+                                <button class="copy-button" id="copyButton" data-tooltip="Copy to clipboard">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="info-grid">
+                            <div class="grid-item">
+                                <span class="grid-label">File Name</span>
+                                <span class="grid-value" id="resultFilename">-</span>
+                            </div>
+                            <div class="grid-item">
+                                <span class="grid-label">File Size</span>
+                                <span class="grid-value" id="resultSize">-</span>
+                            </div>
+                            <div class="grid-item">
+                                <span class="grid-label">Upload Time</span>
+                                <span class="grid-value" id="resultTime">-</span>
+                            </div>
+                            <div class="grid-item">
+                                <span class="grid-label">File ID</span>
+                                <span class="grid-value" id="resultId">-</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="result-actions">
+                        <a href="#" target="_blank" class="neo-button secondary" id="previewButton">
+                            <i class="fas fa-eye"></i>
+                            <span>Preview File</span>
+                        </a>
+                        <button class="neo-button" id="newUploadButton">
+                            <i class="fas fa-plus"></i>
+                            <span>Upload Another</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="neo-footer">
+            <div class="footer-content">
+                <p class="footer-text">
+                    <i class="fas fa-cloud"></i>
+                    Powered by Cloud Storage • Files are permanently hosted
+                </p>
+                <p class="footer-note">
+                    All uploaded files are accessible via permanent URLs. No registration required.
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <div class="notification" id="notification"></div>
+
+    <script src="/script.js"></script>
+</body>
+</html>
