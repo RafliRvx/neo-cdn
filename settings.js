@@ -7,7 +7,7 @@ const settings = {
     username: 'RafliRvx',      // Your GitHub username
     repo: 'media',                // Repository name for file storage
     branch: 'main',                        // Branch name (usually 'main')
-    token: 'YOUR_GITHUB_TOKEN'             // GitHub Personal Access Token
+    token: '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'             // GitHub Personal Access Token
   },
   
   // Upload Settings
