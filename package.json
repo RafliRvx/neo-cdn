@@ -1,0 +1,21 @@
+{
+  "name": "cdn-uploader",
+  "version": "1.0.0",
+  "description": "A Neo Brutalism style CDN file uploader",
+  "main": "api/upload.js",
+  "scripts": {
+    "start": "node api/upload.js",
+    "dev": "nodemon api/upload.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "multer": "^1.4.5-lts.1",
+    "axios": "^1.5.0",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "path": "^0.12.7"
+  },
+  "engines": {
+    "node": "18.x"
+  }
+}
